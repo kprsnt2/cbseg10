@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 relative overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-br from-indigo-600 via-purple-600 to-violet-700 rounded-b-[4rem] shadow-2xl z-0" />
+      <div className="absolute top-0 left-0 w-full h-52 bg-gradient-to-br from-indigo-600 via-purple-600 to-violet-700 rounded-b-[3rem] shadow-2xl z-0" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-indigo-400/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
@@ -70,8 +70,8 @@ export default function Home() {
                 <button
                   onClick={() => setActionAfterSelect('learn')}
                   className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 shadow-md ${actionAfterSelect === 'learn'
-                      ? 'bg-white text-indigo-600 shadow-lg scale-105'
-                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+                    ? 'bg-white text-indigo-600 shadow-lg scale-105'
+                    : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
                     }`}
                 >
                   <BookOpen className="w-5 h-5" />
@@ -80,8 +80,8 @@ export default function Home() {
                 <button
                   onClick={() => setActionAfterSelect('quiz')}
                   className={`flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 shadow-md ${actionAfterSelect === 'quiz'
-                      ? 'bg-white text-purple-600 shadow-lg scale-105'
-                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
+                    ? 'bg-white text-purple-600 shadow-lg scale-105'
+                    : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
                     }`}
                 >
                   <BrainCircuit className="w-5 h-5" />
