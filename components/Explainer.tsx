@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-// import { readStreamableValue } from 'ai/rsc';
 import { explainTopic } from '@/app/actions';
 import { Button, Card, CardContent } from '@/components/ui';
 import { motion } from 'framer-motion';

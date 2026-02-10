@@ -1,7 +1,4 @@
-'use server';
-
 import { generateText } from 'ai';
-// import { createStreamableValue } from 'ai/rsc'; // Removed to simplify build
 import { geminiModel } from '@/lib/ai';
 
 export interface ExplanationState {
