@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^0.0.55",
+    "@ai-sdk/openai-compatible": "^2.0.29",
     "@tailwindcss/typography": "^0.5.19",
     "ai": "^3.4.0",
     "clsx": "^2.1.1",

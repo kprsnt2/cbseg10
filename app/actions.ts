@@ -1,7 +1,6 @@
 'use server';
 
-import { generateText } from 'ai';
-import { geminiModel } from '@/lib/ai';
+import { generateWithFallback } from '@/lib/ai';
 
 const FORMULA_INSTRUCTION = `
 
@@ -61,10 +60,7 @@ A relatable example students can visualize.
 
 Format using Markdown with proper headings and bullet points.${FORMULA_INSTRUCTION}${getLangInstruction(lang)}`;
 
-    const { text } = await generateText({
-        model: geminiModel,
-        prompt: prompt,
-    });
+    const text = await generateWithFallback({ prompt });
 
     return text;
 }
@@ -95,10 +91,7 @@ Return ONLY a JSON array of objects. Each object should have:
 
 Do not include markdown code blocks (like \`\`\`json). Just the raw JSON.${FORMULA_INSTRUCTION}${langNote}`;
 
-    const { text } = await generateText({
-        model: geminiModel,
-        prompt: prompt,
-    });
+    const text = await generateWithFallback({ prompt });
 
     try {
         const cleanedText = text.replace(/```json/g, '').replace(/```/g, '').trim();
@@ -142,10 +135,7 @@ The notes should be based on the NCERT textbook and follow this format:
 
 Format using Markdown with proper headings and bullet points.${FORMULA_INSTRUCTION}${getLangInstruction(lang)}`;
 
-    const { text } = await generateText({
-        model: geminiModel,
-        prompt: prompt,
-    });
+    const text = await generateWithFallback({ prompt });
 
     return text;
 }
@@ -180,10 +170,7 @@ Based on NCERT content and previous year papers, provide:
 For each question, provide a model answer that follows the CBSE marking scheme.
 Format using Markdown.${FORMULA_INSTRUCTION}${getLangInstruction(lang)}`;
 
-    const { text } = await generateText({
-        model: geminiModel,
-        prompt: prompt,
-    });
+    const text = await generateWithFallback({ prompt });
 
     return text;
 }
