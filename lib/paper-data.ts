@@ -101,31 +101,31 @@ export const quickReviewQuestions: QuickQuestion[] = [
         id: 'ai-q1',
         subjectId: 'ai',
         question: 'What are the three domains of AI?',
-        answer: '1. Data Science (Input is data), 2. Computer Vision (Input is images/video), 3. Natural Language Processing (Input is text/speech).',
+        answer: '1. Data Science (Input is data), 2. Computer Vision (Input is images/video), 3. Natural Language Processing (Input is text/speech). (Rec: Gemini 2.5 Pro)',
         examFrequency: 'High',
-        tags: ['Basics']
+        tags: ['Basics', 'Gemini']
     },
     {
         id: 'ai-q2',
         subjectId: 'ai',
         question: 'Explain the AI Project Cycle.',
-        answer: '1. Problem Scoping (Defining goal), 2. Data Acquisition (Collecting data), 3. Data Exploration (Visualising data), 4. Modelling (Creating algorithms), 5. Evaluation (Testing efficiency).',
+        answer: '1. Problem Scoping, 2. Data Acquisition, 3. Data Exploration, 4. Modelling, 5. Evaluation. (Rec: Claude 4.5 Haiku)',
         examFrequency: 'High',
-        tags: ['Project Cycle']
+        tags: ['Project Cycle', 'Claude']
     },
     {
         id: 'ai-q3',
         subjectId: 'ai',
         question: 'What is F1 Score?',
-        answer: 'F1 Score is the harmonic mean of Precision and Recall. It is used when there is an uneven class distribution. Formula: 2 * (Precision * Recall) / (Precision + Recall).',
+        answer: 'F1 Score = 2 * (Precision * Recall) / (Precision + Recall). Crucial for imbalanced datasets. (Rec: DeepSeek 3.2)',
         examFrequency: 'Medium',
-        tags: ['Evaluation']
+        tags: ['Evaluation', 'DeepSeek']
     },
     {
         id: 'ai-q4',
         subjectId: 'ai',
         question: 'Difference between Supervised and Unsupervised Learning.',
-        answer: 'Supervised: Model is trained on labelled data (Input+Output known). Unsupervised: Model finds patterns in unlabelled data (Only Input known).',
+        answer: 'Supervised: Model is trained on labelled data. Unsupervised: Model finds patterns in unlabelled data. (Rec: All Models)',
         examFrequency: 'High',
         tags: ['Modelling']
     },
@@ -133,8 +133,41 @@ export const quickReviewQuestions: QuickQuestion[] = [
         id: 'ai-q5',
         subjectId: 'ai',
         question: 'What is a Neural Network?',
-        answer: 'A system modeled on the human brain, composed of layers of nodes (neurons): Input Layer, Hidden Layers, and Output Layer.',
+        answer: 'A system modeled on the human brain with Input, Hidden, and Output layers. (Rec: Gemini 2.5 Pro)',
         examFrequency: 'High',
         tags: ['Neural Networks']
+    },
+    // New Additions from Multi-Agent Review
+    {
+        id: 'math-q6',
+        subjectId: 'mathematics',
+        question: 'State Pythagoras Theorem.',
+        answer: 'In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. (Rec: Claude 4.5 Haiku)',
+        examFrequency: 'Very High',
+        tags: ['Triangles', 'Claude']
+    },
+    {
+        id: 'math-q7',
+        subjectId: 'mathematics',
+        question: 'Find the distance between two points (x1, y1) and (x2, y2).',
+        answer: 'Distance = √[(x2 - x1)² + (y2 - y1)²]. (Rec: DeepSeek 3.2)',
+        examFrequency: 'High',
+        tags: ['Coordinate Geometry', 'DeepSeek']
+    },
+    {
+        id: 'ai-q6',
+        subjectId: 'ai',
+        question: 'Define Confusion Matrix.',
+        answer: 'A table used to describe the performance of a classification model. It contains True Positives, True Negatives, False Positives, and False Negatives. (Rec: DeepSeek 3.2)',
+        examFrequency: 'High',
+        tags: ['Evaluation', 'DeepSeek']
+    },
+    {
+        id: 'ai-q7',
+        subjectId: 'ai',
+        question: 'What is Natural Language Processing (NLP)?',
+        answer: 'Goal is to enable computers to understand, interpret, and generate human language. Applications: Chatbots, Translation. (Rec: Gemini 2.5 Pro)',
+        examFrequency: 'Medium',
+        tags: ['NLP', 'Gemini']
     }
 ];
