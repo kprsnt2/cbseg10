@@ -3,13 +3,13 @@ import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateText } from 'ai';
 
 // ── Provider 1: Primary Gemini (uses GOOGLE_GENERATIVE_AI_API_KEY env var) ──
-const primaryGemini = google('gemini-2.5-flash-lite');
+const primaryGemini = google('gemini-flash-latest');
 
 // ── Provider 2: Backup Gemini (uses GEMINI_BACKUP_API_KEY env var) ──
 const backupGoogle = createGoogleGenerativeAI({
     apiKey: process.env.GEMINI_BACKUP_API_KEY ?? '',
 });
-const backupGemini = backupGoogle('gemini-2.5-flash-lite');
+const backupGemini = backupGoogle('gemini-flash-latest');
 
 // ── Provider 3: NVIDIA NIM fallback (uses NVIDIA_API_KEY env var) ──
 const nvidia = createOpenAICompatible({
